@@ -9,7 +9,7 @@ public class TestCaracteres {
 			
 			char valor = 66;
 			System.out.println(valor);
-			
+			// casting
 			valor = (char)(valor + 1);
 			System.out.println(valor);
 			
