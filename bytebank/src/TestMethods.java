@@ -24,6 +24,9 @@ public class TestMethods {
 		
 		System.out.println(contaDoAlex.saldo);
 		System.out.println(conta.saldo);
+		
+		conta.titular = "Guilherme Aquino";
+		System.out.println(conta.titular);
 			
 	}
 
