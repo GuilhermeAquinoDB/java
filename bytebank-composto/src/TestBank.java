@@ -11,7 +11,7 @@ public class TestBank {
 		
 		Conta contaDoGui = new Conta();
 		contaDoGui.deposita(100);
-		System.out.println(contaDoGui.pegaSaldo());
+		System.out.println(contaDoGui.getSaldo());
 		
 		// associa o cliente guilherme a conta contaDoGui
 		contaDoGui.titular = guilherme;
