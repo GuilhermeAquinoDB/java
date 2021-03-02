@@ -29,6 +29,4 @@ public class Cliente {
 		this.profissao = profissao;
 	}
 	
-	
-
 }
