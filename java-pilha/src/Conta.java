@@ -1,7 +1,7 @@
 
 public class Conta {
 	
-	void saque() {
+	void saque() throws MyException {
 		
 	}
 
