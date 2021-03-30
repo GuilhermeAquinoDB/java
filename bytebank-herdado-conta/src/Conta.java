@@ -19,19 +19,19 @@ public abstract class Conta {
 	// Métodos
 	public abstract void deposita(double valor);
 
-	public void saca(double valor) {
+	public void saca(double valor) throws SaldoInsuficienteException {
 		if (this.saldo < valor) {
-				throw new SaldoInsuficienteException("Saldo: " + this.saldo + ", valor: " + valor);
+			throw new SaldoInsuficienteException("Saldo: " + this.saldo + ", valor: " + valor);
 		}
-		
+
 		this.saldo -= valor;
-		
+
 	}
 
-	public void transfere(double valor, Conta destino) {
+	public void transfere(double valor, Conta destino) throws SaldoInsuficienteException {
 
 		this.saca(valor);
-			destino.deposita(valor);
+		destino.deposita(valor);
 	}
 
 	public double getSaldo() {
