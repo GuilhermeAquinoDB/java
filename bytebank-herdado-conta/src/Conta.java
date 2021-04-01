@@ -10,8 +10,12 @@ public abstract class Conta {
 	public Conta(int agencia, int numero) {
 		Conta.total++;
 		// System.out.println("O total de contas abertas é: " + Conta.total);
-		this.agencia = agencia;
-		this.numero = numero;
+		if(agencia < 1) {
+			throw new IllegalArgumentException("Agencia invalida");
+		};
+		if(numero < 1) {
+			throw new IllegalArgumentException("Numero da conta invlido");
+		}
 		// System.out.println("estou criando uma conta " + this.numero +" Na Agencia: "+
 		// this.agencia);
 	}
