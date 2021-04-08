@@ -2,6 +2,7 @@ package br.com.bytebank.bank.modelo;
 
 public abstract class Conta {
 
+	// double saldo => package private = visível somente dentro da classe e do pacote
 	protected double saldo;
 	private int agencia;
 	private int numero;
