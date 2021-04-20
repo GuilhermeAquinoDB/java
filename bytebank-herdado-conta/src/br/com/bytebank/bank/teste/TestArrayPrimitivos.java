@@ -1,6 +1,6 @@
 package br.com.bytebank.bank.teste;
 
-public class Teste {
+public class TestArrayPrimitivos {
 	
 	//Array []
 	public static void main(String[] args) {
@@ -12,6 +12,9 @@ public class Teste {
 		idades[2] = 47;
 		idades[3] = 50;
 		idades[4] = 69;
+		
+		// forma literal
+		int[] refs = {1,2,3,4};
 		
 		int idade1 = idades[1];
 		

@@ -29,10 +29,10 @@ public abstract class Conta {
 		// System.out.println("O total de contas abertas é: " + Conta.total);
 		if(agencia < 1) {
 			throw new IllegalArgumentException("Agencia invalida");
-		};
+		} this.agencia = agencia;
 		if(numero < 1) {
 			throw new IllegalArgumentException("Numero da conta invlido");
-		}
+		} this.numero = numero;
 		// System.out.println("estou criando uma conta " + this.numero +" Na Agencia: "+
 		// this.agencia);
 	}
