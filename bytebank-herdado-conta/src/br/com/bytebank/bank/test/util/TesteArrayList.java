@@ -2,6 +2,7 @@ package br.com.bytebank.bank.test.util;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 import br.com.bytebank.bank.modelo.Conta;
 import br.com.bytebank.bank.modelo.ContaCorrente;
@@ -11,8 +12,7 @@ public class TesteArrayList {
 	public static void main(String[] args) {
 
 		//Generics
-		List<Conta> lista = new ArrayList<Conta>();
-
+		List<Conta> lista = new Vector<Conta>();//thread safe
 		Conta cc = new ContaCorrente(22, 11);
 		lista.add(cc);
 
