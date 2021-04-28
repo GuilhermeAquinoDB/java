@@ -3,20 +3,20 @@ package br.com.bytebank.bank.test.util;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Teste {
+public class TesteWrapperInteger {
 
 	public static void main(String[] args) {
 
 		int idade = 29;// Integer
 
 		Integer idadeRef = Integer.valueOf(29); // autoboxing
-		System.out.println(idadeRef.doubleValue());
+		System.out.println(idadeRef.intValue());
 		
-		System.out.println(Integer.MAX_VALUE);
-		System.out.println(Integer.MIN_VALUE);
+		System.out.println(Integer.MAX_VALUE); // 2^31 - 1
+		System.out.println(Integer.MIN_VALUE); // -2^31
 		
-		System.out.println(Integer.SIZE);
-		System.out.println(Integer.BYTES);
+		System.out.println(Integer.SIZE); // 32 bits
+		System.out.println(Integer.BYTES); // 4 bytes
 
 		int valor = idadeRef.intValue(); // unboxing
 		String s = args[0];// "10"
