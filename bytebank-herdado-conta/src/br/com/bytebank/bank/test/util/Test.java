@@ -54,12 +54,16 @@ public class Test {
 //		Collections.sort(lista, new NumeroDaCotaComparator());
 //		Collections.sort(lista);
 //		Collections.reverse(lista);
+//		Collections.rotate(lista, 2); // rotaciona 2 posicoes
+//		Collections.shuffle(lista);
 
 		System.out.println("---------------------------------------------");
 
 		for (Conta conta : lista) {
 			System.out.println(conta + " , " + conta.getTitular().getNome());
 		}
+		
+		
 	}
 
 }
