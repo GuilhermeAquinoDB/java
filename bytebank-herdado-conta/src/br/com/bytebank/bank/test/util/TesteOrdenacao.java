@@ -10,7 +10,7 @@ import br.com.bytebank.bank.modelo.Conta;
 import br.com.bytebank.bank.modelo.ContaCorrente;
 import br.com.bytebank.bank.modelo.ContaPoupanca;
 
-public class Test {
+public class TesteOrdenacao {
 
 	public static void main(String[] args) {
 
@@ -44,33 +44,59 @@ public class Test {
 		lista.add(cc3);
 		lista.add(cc4);
 
-		lista.sort(new Comparator<Conta>() { // classe anonima
+		for (Conta conta : lista) {
+			System.out.println(conta);
+		}
 
-			@Override
-			public int compare(Conta c1, Conta c2) {
+//		NumeroDaCotaComparator comparator = new NumeroDaCotaComparator();
+		lista.sort(new TitularDaContaComparator());
+		
+//		Collections.sort(lista, new NumeroDaCotaComparator());
+//		Collections.sort(lista);
+//		Collections.reverse(lista);
+//		Collections.rotate(lista, 2); // rotaciona 2 posicoes
+//		Collections.shuffle(lista);
 
-				return Integer.compare(c1.getNumero(), c2.getNumero());
-
-			}
-
-		});
-
-		Comparator<Conta> comp = new Comparator<Conta>() {
-
-			@Override
-			public int compare(Conta c1, Conta c2) {
-
-				String nomeC1 = c1.getTitular().getNome();
-				String nomeC2 = c2.getTitular().getNome();
-				return nomeC1.compareTo(nomeC2);
-			}
-
-		};
+		System.out.println("---------------------------------------------");
 
 		for (Conta conta : lista) {
 			System.out.println(conta + " , " + conta.getTitular().getNome());
 		}
+		
+		
+	}
 
+}
+
+class TitularDaContaComparator implements Comparator<Conta> {
+
+	@Override
+	public int compare(Conta c1, Conta c2) {
+		
+		String nomeC1 = c1.getTitular().getNome();
+		String nomeC2 = c2.getTitular().getNome();
+		return nomeC1.compareTo(nomeC2);
+	}
+	
+}
+
+class NumeroDaCotaComparator implements Comparator<Conta> {
+
+	@Override
+	public int compare(Conta c1, Conta c2) {
+		
+		return Integer.compare(c1.getNumero(), c2.getNumero());
+
+//		return c1.getNumero() - c2.getNumero();
+		
+//		if (c1.getNumero() < c2.getNumero()) {
+//			return -345;
+//		}
+//
+//		if (c1.getNumero() > c2.getNumero()) {
+//			return 1;
+//		}
+//		return 0;
 	}
 
 }
