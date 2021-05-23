@@ -1,2 +1,2 @@
-Lorem impsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-fghjnfjhngfvnjgfnjhgfnjghfyjnghyjnjnvfgnj
+criacao de arquivo de texto
+em java
