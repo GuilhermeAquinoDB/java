@@ -12,22 +12,24 @@ public class TesteLeitura2 {
 
 		while (scanner.hasNextLine()) {
 			String linha = scanner.nextLine();
-			System.out.println(linha);
-			
+//			System.out.println(linha);
+
 			Scanner linhaScanner = new Scanner(linha);
 			linhaScanner.useLocale(Locale.US);
 			linhaScanner.useDelimiter(",");
-			
-			String valor1 = linhaScanner.next();
-			int valor2 = linhaScanner.nextInt();
-			int valor3 = linhaScanner.nextInt();
-			String valor4 = linhaScanner.next();
-			Double valor5 = linhaScanner.nextDouble();
-			
-			System.out.println(valor1 + valor2 + valor3 + valor4 + valor5);
-			
+
+			String tipoConta = linhaScanner.next();
+			int agencia = linhaScanner.nextInt();
+			int numero = linhaScanner.nextInt();
+			String titulat = linhaScanner.next();
+			Double saldo = linhaScanner.nextDouble();
+
+			String valorFormatado = String.format(new Locale("pt", "BR"), "%s - %04d-%08d, %s R$:%010.2f", tipoConta,
+					agencia, numero, titulat, saldo);
+			System.out.println(valorFormatado);
+
 			linhaScanner.close();
-			
+
 //			String[] valores = linha.split(",");
 //			System.out.println(valores[3]);
 
