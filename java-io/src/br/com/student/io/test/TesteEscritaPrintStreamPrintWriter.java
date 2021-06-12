@@ -14,7 +14,7 @@ public class TesteEscritaPrintStreamPrintWriter {
 
 //		BufferedWriter bw = new BufferedWriter(new FileWriter("lorem2.txt"));	
 //		PrintStream ps = new PrintStream(new File("lorem2.txt"));
-		PrintWriter ps = new PrintWriter("lorem2.txt");
+		PrintWriter ps = new PrintWriter("lorem2.txt", "UTF-8");
 		
 		ps.println("Lorem ipsum dolor cbuf, consectetur adipiscing selitm, sed");
 		ps.println();

@@ -13,10 +13,15 @@ public class TesteUnicodeEEncoding {
 
 		Charset charset = Charset.defaultCharset();
 		System.out.println(charset.displayName());
+		
+		byte[] bytes = s.getBytes("UTF-16");
+		System.out.print(bytes.length + ", UTF-16, ");
+		String sNovo = new String(bytes, "UTF-16");
+		System.out.println(sNovo);
 
-		byte[] bytes = s.getBytes("windows-1252");
+		bytes = s.getBytes("windows-1252");
 		System.out.print(bytes.length + ", windows-1252, ");
-		String sNovo = new String(bytes, "windows-1252");
+		sNovo = new String(bytes, "windows-1252");
 		System.out.println(sNovo);
 		
 		bytes = s.getBytes(StandardCharsets.US_ASCII);
