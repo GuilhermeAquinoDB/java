@@ -14,14 +14,15 @@ public class TesteUnicodeEEncoding {
 		Charset charset = Charset.defaultCharset();
 		System.out.println(charset.displayName());
 
-		byte[] bytes = s.getBytes();
-		System.out.println(bytes.length + ", windows-1252, ");
+		byte[] bytes = s.getBytes("windows-1252");
+		System.out.print(bytes.length + ", windows-1252, ");
 		String sNovo = new String(bytes, "windows-1252");
 		System.out.println(sNovo);
 		
 		bytes = s.getBytes(StandardCharsets.US_ASCII);
-		System.out.println(bytes.length + ", US-ASCII, ");
+		System.out.print(bytes.length + ", US-ASCII, ");
 		sNovo = new String(bytes, "US-ASCII");
+		System.out.println(sNovo);
 	}
 
 }
