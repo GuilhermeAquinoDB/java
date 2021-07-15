@@ -1,3 +1,5 @@
+import java.util.Iterator;
+import java.util.Set;
 
 public class TestaCursoComAluno {
 
@@ -19,7 +21,17 @@ public class TestaCursoComAluno {
 
 		System.out.println("Todos os alunos matriculados: ");
 
-		// expressão lambda
+/*		Set<Aluno> alunos = javaColecoes.getAlunos();
+*		Iterator<Aluno> iterador = alunos.iterator();
+*		while (iterador.hasNext()) {
+*			System.out.println(iterador.next());
+*		}
+*
+*		for (Aluno a : javaColecoes.getAlunos()) {
+*			System.out.println(a);
+*		}
+*/
+		// expressão lambda Java 8
 		javaColecoes.getAlunos().forEach(a -> {
 			System.out.println(a);
 		});
@@ -31,7 +43,7 @@ public class TestaCursoComAluno {
 
 		System.out.println("E esse Turini, está matriculado?");
 		System.out.println(javaColecoes.estaMatriculado(turini));
-		
+
 		System.out.println(a1.hashCode() == turini.hashCode());
 
 	}
