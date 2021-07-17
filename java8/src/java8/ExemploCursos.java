@@ -41,31 +41,9 @@ public class ExemploCursos {
 		// lambda
 		cursos.sort(Comparator.comparingInt(c -> c.getAlunos()));
 
-//		int sum = cursos.stream().filter(c -> c.getAlunos() >= 100).mapToInt(Curso::getAlunos).sum();
-
-//		System.out.println(sum);
-
-//		cursos.stream()
-//				.filter(c -> c.getAlunos() >= 100)
-//				.findAny()
-//				.ifPresent(c -> System.out.println(c.getNome()));
-//		
-//		cursos = cursos.stream()
-//		.filter(c -> c.getAlunos() >= 100)
-//		.collect(Collectors.toList());
-//		
-		cursos.stream()
-			.filter(c -> c.getAlunos() >= 100)
-			.collect(Collectors.toMap(
-					c -> c.getNome(),
-					c -> c.getAlunos()))
-			.forEach((nome, alunos) -> System.out.println(nome + " tem " + alunos + " alunos"));
-		
-		
-//		cursos.stream().forEach(c -> System.out.println(c.getNome()));
-		
-//		Curso curso = optionalCurso.orElseThrow(null);
-//		System.out.println(curso.getNome());
+		cursos.stream().filter(c -> c.getAlunos() >= 100)
+				.collect(Collectors.toMap(c -> c.getNome(), c -> c.getAlunos()))
+				.forEach((nome, alunos) -> System.out.println(nome + " tem " + alunos + " alunos"));
 
 	}
 }
