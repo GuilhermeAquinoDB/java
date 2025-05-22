@@ -53,11 +53,3 @@ O repositório está organizado em diretórios que representam diferentes módul
 - **Aplicação Prática:** Cada módulo foi desenvolvido com o intuito de aplicar teorias em situações práticas, consolidando o conhecimento adquirido.
 - **Refatoração Contínua:** Revisões e melhorias constantes no código indicam uma preocupação com a qualidade e eficiência das soluções.
 
-## 🚀 Como Executar os Projetos
-
-1. **Pré-requisitos:** Certifique-se de ter o Java JDK instalado em sua máquina.
-
-2. **Clonar o Repositório:**
-
-   ```bash
-   git clone https://github.com/GuilhermeAquinoDB/java.git
